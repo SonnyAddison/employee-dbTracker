@@ -11,12 +11,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "clear": "^0.1.0",
     "console.table": "^0.10.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
-    "inquirer": "^9.1.0",
-    "jshint": "^2.13.5",
+    "inquirer": "^8.1.5np ",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.21.4"
+    "sequelize": "^6.21.4",
+    "until": "^0.1.1",
+    "util": "^0.12.4"
   }
 }
