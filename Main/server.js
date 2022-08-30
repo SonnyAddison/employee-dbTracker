@@ -142,6 +142,67 @@ viewEmployees = () => {
   })
 }
 
+viewEmployeesByDepartment = () => {
+  readDepartments().then(departments => {
+    const employeeDept = departments.map(({ name: name, id: value}) => ({ name, value }));
+    inquirer.prompt([
+      {
+        name: "department",
+        type: "list",
+        message: "Which department would you like to view?",
+        choices: employeeDept
+      }
+    ]).then(answer => {
+      let query = "SELECT * FROM employee WHERE role_id = ?";
+      connection.query(query, [answer.department], async function (err, res) {
+        if (err) throw err;
+          try {
+            console.log("\n");
+            console.table("roles", res);
+            console.log("\n");
+            await initiate();
+          }
+          catch (err) {
+            console.log(err);
+          }
+      }
+      )})
+      .catch(err => {
+        console.log(err);
+      })
+  })};
+
+viewEmployeesByRole = () => {
+  readRoles().then(roles => {
+    const employeeRole = roles.map(({ name: name, id: value}) => ({ name, value }));
+    inquirer.prompt([
+      {
+        name: "role",
+        type: "list",
+        message: "Which role would you like to view?",
+        choices: employeeRole
+      }
+    ]).then(answer => {
+      let query = "SELECT * FROM employee WHERE role_id = ?";
+      connection.query(query, [answer.role], async function (err, res) {
+        if (err) throw err;
+          try {
+            console.log("\n");
+            console.table("roles", res);
+            console.log("\n");
+            await initiate();
+          }
+          catch (err) {
+            console.log(err);
+          }
+      }
+      )})
+      .catch(err => {
+        console.log(err);
+      })
+  })
+}
+
 viewEmployeesByManager = () => {
   connection.query("SELECT manager_name AS Manager, CONCAT(first_name, ' ', last_name) AS Employee FROM employee", async function (err, res) {
     try {
@@ -228,7 +289,7 @@ addDepartment = () => {
   ]).then(answer => {
       connection.query(
           "INSERT INTO department SET ? ", {
-              name: answer.department
+              department_name: answer.department
           }, (err => {
               if (err) throw err;
               console.log("\n");
@@ -291,7 +352,7 @@ addEmployee = () => {
                   first_name: answer.firstName,
                   last_name: answer.lastName,
                   role_id: answer.empRole,
-                  manager_id: answer.empManager
+                  manager_name: answer.empManager
               }, (err => {
                   if (err) throw err;
                   console.log("\n");

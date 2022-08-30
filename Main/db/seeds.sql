@@ -17,11 +17,12 @@ VALUES ("Sales Associate", 1000, 1),
        ("Attorney", 2500, 4),
        ("Lead Attorney", 3000, 4);
 
-INSERT INTO employee (first_name, last_name, role_id, manager_id)
-VALUES ("Mike", "Chan", 1, NULL),
-       ("Ashley", "Rodriguez", 2, 2),
-       ("Kevin", "Tupik", 2, Null),
-       ("Kumal", "Singh", 2, Null),
-       ("Malia", "Brown", 3, 1),
-       ("Sarah", "Lourd", 4, 4),
-       ("tom" , "Allen", 4, Null);
+INSERT INTO employee (first_name, last_name, role_id, manager_name)
+VALUES ("Mike", "Chan", 1, "Sonny Addison"),
+       ("Ashley", "Rodriguez", 2, "Sonny Addison"),
+       ("Sonny", "Addison", 3, "N/A"),
+       ("Kevin", "Tupik", 4, "Kumal Singh"),
+       ("Kumal", "Singh", 7, "N/A"),
+       ("Malia", "Brown", 8, "N/A"),
+       ("Sarah", "Lourd", 10, "Tom Allen"),
+       ("Tom" , "Allen", 11, "N/A");
