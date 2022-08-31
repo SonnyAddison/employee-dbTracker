@@ -1,5 +1,5 @@
 # Employee-Tracker
-https://img.shields.io/github/license/SonnyAddison/employee-dbTracker?style=plastic
+![badmath](https://img.shields.io/github/license/SonnyAddison/employee-dbTracker?style=plastic)
   ## Description
 
  CMD Line program to help track employees by departments and roles.  Will also show the salary for positions. Able to add, edit, and delete departments, roles, and employees.
