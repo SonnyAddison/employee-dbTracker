@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 const connection = sql.createConnection({
   host: "localhost",
   user: "root",
-  password: "Diego01$onny",
+  password: "",
   database: "hr_db"
 });
 
