@@ -1,8 +1,8 @@
 # Employee-Tracker
-
+https://img.shields.io/github/license/SonnyAddison/employee-dbTracker?style=plastic
   ## Description
 
- 
+ CMD Line program to help track employees by departments and roles.  Will also show the salary for positions. Able to add, edit, and delete departments, roles, and employees.
 
 ## User Sory
 
@@ -29,7 +29,8 @@ THEN I am prompted to enter the name, salary, and department for the role and th
 WHEN I choose to add an employee  
 THEN I am prompted to enter the employee’s first name, last name, role, and manager, and that employee is added to the database  
 WHEN I choose to update an employee role  
-THEN I am prompted to select an employee to update and their new role and this information is updated in the database   
+THEN I am prompted to select an employee to update and their new role and this information is updated in the database  
+
 
 ---
 ## Table of Contents (Optional)
@@ -41,30 +42,57 @@ THEN I am prompted to select an employee to update and their new role and this i
   
 ---
 
-## Installation
+## Installation  
 
- 
+- Clone program from this repository to your computer using the SSH.
+- Open the files within VS Code or prefered coding editor.  
+- Open the "Main" file within the intergreated terminal.  
+- Type in "npm i" to install npm modules.  
+- On line 21 of the server.js file, make sure you add in your mysql password.  
+- Open mysql and source the schema and seed the tables
+- Exit mysql 
+- Within in terminal type "npm start" and enjoy the program. 
   
 ---
 
 ## Usage
 
-    
+This program gives one the ability to manager an employee database using SQL.   
   
+### Main Menu
+![Main Menu](/Main/assets/images/startPage.jpg)  
 
-![Answer all questions or go no further](/Develop/assets/images/haveToAnswersAllQuestions.jpg)  
+### Views
 
-![All questions answered](/Develop/assets/images/questionsAnswered.jpg)  
+![views](/Main/assets/images/viewPage.jpg)
 
-Viedo Tutorial:  
+### Adds
+
+![adds](/Main/assets/images/addPage.jpg)  
+
+### Updates
+
+![updates](/Main/assets/images/update%20Page.jpg)
+
+### Database view
+
+![database](/Main/assets/images/dbScreen.jpg)
+
+
+### Viedo Tutorial:
+
+https://drive.google.com/file/d/1SmFrlxZc5TTOrRrsMFItB742URuDqrur/view
+### Github:
+
+https://github.com/SonnyAddison/employee-dbTracker
+
+
 
 
 ---
 ## Credits
 
-Thank you to Coding-Boot-Camp for their Starter Code on this project:
-https://github.com/coding-boot-camp
-  
+ 
   
 ---
 ## License
